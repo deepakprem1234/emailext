@@ -1,4 +1,4 @@
-def emailext ():
+def emailtext()
             {
              emailext (
                 subject: "FAILED: Job at STAGE ${env.STAGE_NAME} ${env.JOB_NAME} - ${env.BUILD_NUMBER}",
