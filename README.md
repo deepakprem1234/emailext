@@ -1,0 +1,2 @@
+# emailext
+def emailext ():             {              emailext (                 subject: "FAILED: Job at STAGE ${env.STAGE_NAME} ${env.JOB_NAME} - ${env.BUILD_NUMBER}",                 attachLog: true, attachmentsPattern: '*.log',                 body: """&lt;br>&lt;p>&lt;p>Check console output at &amp;QUOT;&lt;a href='${env.BUILD_URL}console'>${env.JOB_NAME} - ${env.BUILD_NUMBER}&lt;/a>&amp;QUOT;&lt;/p>&lt;br>""",                 to: """${env.QA_MAIL_ID}""", mimeType: 'text/html', recipientProviders: [[$class: 'DevelopersRecipientProvider']]                 )         }
